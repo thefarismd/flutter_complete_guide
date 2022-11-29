@@ -5,8 +5,11 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  var questionIndex = 0;
+
   void answerQuestion() {
-    print('Answer chosen!');
+    questionIndex = questionIndex + 1;
+    print(questionIndex);
   }
 
   @override
@@ -22,14 +25,14 @@ class MyApp extends StatelessWidget {
           title: Text('My First App'),
         ),
         body: Column(children: [
-          Text('The questions!'),
+          Text(questions[questionIndex]),
           ElevatedButton(onPressed: answerQuestion, child: Text('Answer 1')),
           ElevatedButton(
               onPressed: (() => print('Answer 2 chosen!')),
               child: Text('Answer 2')),
           ElevatedButton(
               onPressed: () {
-                print('Answer 3 chosen');
+                print('Answer 3 chosen!');
               },
               child: Text('Answer 3')),
         ]),
