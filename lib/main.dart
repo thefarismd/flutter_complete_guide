@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
     // ];
 
     //Mapping
-    var questions = [
+    var questions = const [
       {
         'questionText': 'What\'s your favourite color?',
         'answers': ['Back', 'Red', 'Green', 'White']
