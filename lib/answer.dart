@@ -4,8 +4,9 @@ class Answer extends StatelessWidget {
   // const MyWidget({Key key}) : super(key: key);
 
   final Function selectHandler;
+  final String answerText;
 
-  Answer(this.selectHandler);
+  Answer(this.selectHandler, this.answerText);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class Answer extends StatelessWidget {
         width: double.infinity,
         child: ElevatedButton(
           onPressed: selectHandler,
-          child: Text('Answer 1'),
+          child: Text(answerText),
           style: ButtonStyle(
               foregroundColor: MaterialStateProperty.all(Colors.black),
               backgroundColor: MaterialStateProperty.all(Colors.blue)),
